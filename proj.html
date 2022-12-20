@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    <link rel="stylesheet" href="proj.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#Home" class="back"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        <a href="#Help">Need Help?</a>
+    </nav>
+
+    <div class="panel">
+        <div class="heading">
+            <h1>Registration</h1>
+            <h6>Leave your contact details</h6>
+        </div>
+        <form action="proj2.html">
+            <div class="row">
+                <div class="input-group">
+                    <input id="firstname" type="text" required />
+                    <label class="label" for="firstname">First Name</label>
+                </div>
+                <div class="input-group">
+                    <input id="lastname" type="text" required />
+                    <label class="label" for="lastname">Last Name</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label class="label" for="email">Email</label>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="number" required>
+                <label class="label" for="number">Your Phone</label>
+            </div>
+            <button id="next" type="submit">Next</button>
+            <h4>or</h4>
+
+            <a href="proj2.html" id="google" type="submit"><img class="img" src="g.png" alt="Google">With Google</a>
+
+            <a href="proj2.html" id="fb" type="submit"><img class="img" src="ff.png" alt="Google">With Facebook</a>
+        </form>
+        <h5>Already Registered?<a href="#signin">Sign in</a></h5>
+    </div>
+
+</body>
+
+</html>

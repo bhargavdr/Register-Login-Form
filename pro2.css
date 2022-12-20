@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    /* background-image: url("bg.jpg"); */
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0 2em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+nav a {
+    color: blueviolet;
+}
+
+.heading {
+    text-align: center;
+}
+
+.panel {
+    /* width: 100px;
+    max-width: 960px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+input {
+    border-radius: 20px;
+    margin-left: 150px;
+    width: 50%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #b3b3b3;
+    color: blueviolet;
+    background: transparent;
+    font-size: 15px;
+}
+
+form {
+    padding-top: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    margin-left: 150px;
+    transition: all 0.2s;
+    padding: 0 2px;
+    z-index: 1;
+    color: #b3b3b3;
+    cursor: text;
+}
+
+.label::before {
+    content: "";
+    height: 5px;
+    position: absolute;
+    left: 0;
+    /* top: 10px; */
+    width: 50%;
+    z-index: -1;
+    cursor: text;
+}
+
+#next {
+    padding: 10px;
+    color: white;
+    outline: none;
+    background: blueviolet;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -10px;
+    font-size: smaller;
+    transition: 0.2s;
+    background-color: white;
+    color: blueviolet;
+    font-size: 14px;
+}
+
+/* input:focus+.label,
+.filled {
+    top: -10px;
+    color: blueviolet;
+    font-size: 14px;
+} */
+
+/* .input-group input:focus,
+.input-group input:valid {
+    border: 1px solid blueviolet;
+} */
+
+.rounded {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid black;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.show {
+    /* display: none; */
+    position: absolute;
+    left: 420px;
+    top: 13px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.rounded:checked {
+    appearance: auto;
+    clip-path: circle(50% at 50% 50%);
+    accent-color: blueviolet;
+}
+
+/* .checkbox {
+    padding-left: 150px;
+} */
+
+span {
+    color: blueviolet;
+}
+
+.popup {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background-color: aquamarine; */
+    width: 330px;
+    border: 1px solid #b3b3b3;
+    border-radius: 20px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 1s, top 0.4s;
+}
+
+.input {
+    font-size: small;
+    padding-bottom: 10px;
+}
+
+.popup h2 {
+    margin: 30px 0 10px;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 80%;
+    transform: translate(-50%, -50%)scale(1);
+}
+
+.close {
+    margin-left: 275px;
+    margin-top: 8px;
+    background: transparent;
+    border: none;
+}
+
+.options input:valid {
+    border: 1px solid blueviolet;
+}
+
+.options input:valid~label,
+.options input:focus~label {
+    top: -54px;
+    font-size: smaller;
+    transition: 0.2s;
+    background-color: white;
+    color: blueviolet;
+    font-size: 14px;
+    text-align: center;
+}
+
+.options .label {
+    position: relative;
+    /* left: 325px;
+    margin-left: 310px;
+    margin-top: 230px; */
+    top: -27px;
+    transition: all 0.2s;
+    padding: 0 0;
+    z-index: 1;
+    color: #b3b3b3;
+    cursor: text;
+}
+
+.options input:focus {
+    border: 1px solid blueviolet;
+}
+
+i {
+    color: blueviolet;
+}
+
+.error input {
+    border: 1px red solid;
+}
+
+.success input {
+    border: 1px blueviolet solid;
+}
+
+.input-group .icon {
+    position: absolute;
+    right: 120px;
+    top: 15px;
+    visibility: hidden;
+}
+
+
+.success i.fa-check-circle {
+    visibility: visible;
+    color: blueviolet;
+}
+
+.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: red;
+}
+
+
+.input-group p {
+    font-size: 15px;
+    color: red;
+    visibility: hidden;
+    text-align: center;
+}
+
+.error p {
+    visibility: visible;
+}
+
+@media (max-width:450px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    nav a {
+        text-decoration: none;
+        padding-top: 10px;
+    }
+
+    .panel {
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+    }
+
+    input {
+        border-radius: 20px;
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+        outline: 0;
+        border: 1px solid #b3b3b3;
+        background: transparent;
+        font-size: 15px;
+    }
+
+    .label {
+        position: absolute;
+        left: 10px;
+        top: 14px;
+        margin-left: 0;
+        transition: all 0.2s;
+        padding: 0 2px;
+        z-index: 1;
+        color: #b3b3b3;
+        cursor: text;
+    }
+
+    #next {
+        padding: 10px;
+        color: white;
+        outline: none;
+        background: blueviolet;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .show {
+        position: absolute;
+        left: 250px;
+        top: 15px;
+        background: transparent;
+    }
+
+    .input-group .icon {
+        position: absolute;
+        left: 300px;
+        top: 17px;
+        visibility: hidden;
+    }
+}
